@@ -1,0 +1,9 @@
+Error on line number 2
+Error on line number 3
+Error on line number 4
+Error on line number 5
+Error on line number 6
+
+The given input is not LALR(1) Parsable
+
+
