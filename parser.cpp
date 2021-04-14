@@ -75,9 +75,11 @@ void parsing(vector<pair<string, string>> input, vector<int> token_line){
 			cout << "Error on line number " << line_number - 1 << "\n";
 			int curr_line_num = line_number;
 			token_stack.top() = "0";
+
 			while((token_line[i] == curr_line_num) && i < input.size()){
 				i++;
 			}
+
 			i--;
 		}
 		i++;
@@ -201,6 +203,9 @@ void create_parse_tree(){
 			j++;
 		}
 	}
+	for(auto it: current_row){
+		cout << it << " ";
+	}
 }
 
 int main(){
@@ -224,6 +229,7 @@ int main(){
 	token_line.push_back(token_line[token_line.size() - 1]);
 
 	parsing(token_list, token_line);
+
 
 	if(is_parsable && !has_error){
 		cout << "\nThe given input is LALR(1) Parsable\n\n\n";
